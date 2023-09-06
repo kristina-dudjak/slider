@@ -1,0 +1,15 @@
+@use 'theme';
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+
+  .images {
+    grid-column: 1 / 9;
+  }
+}
+
+p {
+  color: map-get(theme.$palette, blue);
+}
