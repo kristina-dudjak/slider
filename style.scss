@@ -35,6 +35,7 @@ body {
     }
 
     &__title {
+      margin-top: 0;
       color: map-get(theme.$palette, blue);
     }
 

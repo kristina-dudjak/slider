@@ -34,6 +34,7 @@ body {
   }
 }
 .container__description__title {
+  margin-top: 0;
   color: #134880;
 }
 .container__description__text {
