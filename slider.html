@@ -1,29 +1,87 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="slider.css" />
-    <script src="slider.js"></script>
+    <link rel="stylesheet" href="src/style/slider.css" />
   </head>
   <body>
     <article class="slider">
-      <ul class="slider__up"></ul>
+      <div class="slider__up">
+        <ul class="slider__up__list">
+          <img
+            src="src/assets/slider-image-7.jpg"
+            class="slider__up__list__img"
+          />
+          <img
+            src="src/assets/slider-image-6.jpg"
+            class="slider__up__list__img"
+          />
+          <img
+            src="src/assets/slider-image-9.jpg"
+            class="slider__up__list__img"
+          />
+          <img
+            src="src/assets/slider-image-8.jpg"
+            class="slider__up__list__img"
+          />
+          <img
+            src="src/assets/slider-image-5.jpg"
+            class="slider__up__list__img"
+          />
+          <img
+            src="src/assets/slider-image-4.jpg"
+            class="slider__up__list__img"
+          />
+        </ul>
+      </div>
       <section class="slider__down">
-        <ul class="slider__down__list"></ul>
+        <div class="slider__down__cont">
+          <ul class="slider__down__cont__list">
+            <img
+              src="src/assets/slider-image-5.jpg"
+              class="slider__down__cont__list__img"
+            />
+            <img
+              src="src/assets/slider-image-4.jpg"
+              class="slider__down__cont__list__img"
+            />
+            <img
+              src="src/assets/slider-image-1.jpg"
+              class="slider__down__cont__list__img"
+            />
+            <img
+              src="src/assets/slider-image-2.jpg"
+              class="slider__down__cont__list__img"
+            />
+            <img
+              src="src/assets/slider-image-3.jpg"
+              class="slider__down__cont__list__img"
+            />
+          </ul>
+        </div>
         <div class="slider__down__arrows">
           <button id="btn_left" class="slider__down__arrows-left">
             <img
-              class="slider__down__arrows-left-icon"
-              src="assets/arrow-blue-left.png"
+              class="slider__down__arrows-left-icon arrow-blue"
+              src="src/assets/arrow-blue-left.png"
+            />
+            <img
+              class="slider__down__arrows-left-icon arrow-gray"
+              src="src/assets/arrow-gray-left.png"
             />
           </button>
           <button id="btn_right" class="slider__down__arrows-right">
             <img
-              class="slider__down__arrows-left-icon"
-              src="assets/arrow-blue-right.png"
+              class="slider__down__arrows-right-icon arrow-blue"
+              src="src/assets/arrow-blue-right.png"
+            />
+            <img
+              class="slider__down__arrows-right-icon arrow-gray"
+              src="src/assets/arrow-gray-right.png"
             />
           </button>
         </div>
       </section>
     </article>
+    <script defer src="dist/script/slider.js"></script>
   </body>
 </html>

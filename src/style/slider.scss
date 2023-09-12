@@ -1,0 +1,123 @@
+@use '../theme/colors';
+.slider {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+
+  @media screen and (max-width: 1490px) {
+    height: 80%;
+  }
+
+  &__up {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    &__list {
+      padding: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      display: flex;
+      gap: 10px;
+      &__img {
+        height: 200px;
+        border-radius: 5px;
+
+        @media screen and (max-width: 1490px) {
+          height: 160px;
+        }
+
+        @media screen and (max-width: 768px) {
+          height: 110px;
+        }
+        @media screen and (max-width: 500px) {
+          height: 100px;
+        }
+        @media screen and (max-width: 440px) {
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  &__down {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    &__cont {
+      grid-column: 1 / 7;
+      position: relative;
+      overflow: hidden;
+      &__list {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        gap: 10px;
+
+        &__img {
+          border-radius: 5px;
+          height: 200px;
+
+          @media screen and (max-width: 1490px) {
+            height: 160px;
+          }
+
+          @media screen and (max-width: 768px) {
+            height: 110px;
+          }
+          @media screen and (max-width: 500px) {
+            height: 100px;
+          }
+          @media screen and (max-width: 440px) {
+            height: 60px;
+          }
+        }
+      }
+    }
+    &__arrows {
+      justify-self: end;
+      grid-column: 8 / 9;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &-left,
+      &-right {
+        width: 60px;
+        height: 60px;
+        border: 1px solid map-get(colors.$palette, blue);
+        border-radius: 4px;
+        background-color: map-get(colors.$palette, white);
+        cursor: pointer;
+
+        .arrow-gray {
+          display: none;
+        }
+
+        &:hover {
+          border: 1px solid map-get(colors.$palette, lightgray);
+
+          .arrow-blue {
+            display: none;
+          }
+
+          .arrow-gray {
+            display: inline-block;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

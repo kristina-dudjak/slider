@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){return $("#slider").load("slider.html")});

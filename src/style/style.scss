@@ -1,0 +1,111 @@
+@use '../theme/colors';
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 4fr 1fr;
+  column-gap: 19px;
+  row-gap: 40px;
+
+  @media screen and (max-width: 1160px) {
+    row-gap: 0;
+  }
+
+  &__header,
+  &__footer {
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 19px;
+    height: 70%;
+
+    &-white {
+      grid-column: 1 / 5;
+      background-color: map-get(colors.$palette, white);
+    }
+
+    &-gray {
+      grid-column: 5 / 13;
+      background-color: map-get(colors.$palette, lightgray);
+    }
+  }
+
+  &__header {
+    &-white {
+      border-radius: 0px 0px 5px 5px;
+    }
+
+    &-gray {
+      border-radius: 0px 0px 5px 5px;
+    }
+  }
+
+  &__footer {
+    grid-column: 1 / 13;
+    align-self: end;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 19px;
+    height: 70%;
+
+    &-white {
+      grid-column: 1 / 5;
+      background-color: map-get(colors.$palette, white);
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    &-gray {
+      grid-column: 5 / 13;
+      background-color: map-get(colors.$palette, lightgray);
+      border-radius: 5px 5px 0px 0px;
+    }
+  }
+
+  &__content {
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 19px;
+
+    @media screen and (max-width: 1160px) {
+      grid-template-rows: 3fr 1fr;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-rows: 1fr 1fr;
+    }
+    &__images {
+      grid-column: 1 / 9;
+
+      @media screen and (max-width: 1160px) {
+        grid-column: 1 / 13;
+      }
+    }
+    &__desc {
+      grid-column: 9 / 12;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media screen and (max-width: 1160px) {
+        grid-column: 1 / 13;
+      }
+    }
+  }
+
+  &__footer {
+    align-self: end;
+    &-white {
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    &-gray {
+      border-radius: 5px 5px 0px 0px;
+    }
+  }
+}
